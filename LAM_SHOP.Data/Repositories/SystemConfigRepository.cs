@@ -1,0 +1,16 @@
+﻿using LAM_SHOP.Data.Infrastructure;
+using LAM_SHOP.Model.Models;
+
+namespace LAM_SHOP.Data.Repositories
+{
+    public interface ISystemConfigRepository : IRepository<SystemConfig>
+    {
+    }
+
+    public class SystemConfigRepository : RepositoryBase<SystemConfig>, ISystemConfigRepository
+    {
+        public SystemConfigRepository(IDbFactory dbFactory) : base(dbFactory)
+        {
+        }
+    }
+}
